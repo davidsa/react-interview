@@ -2,10 +2,30 @@ import UserForm from "./UserForm";
 
 function App() {
   return (
-    <div className="flex flex-col items-center py-10">
+    <div className="flex flex-col items-center py-10 gap-10">
       <div className="flex flex-col items-center w-2xl">
         <h1>User Form</h1>
-        <UserForm />
+        <UserForm onSubmit={(values) => console.log(values)} showTOS={true} />
+      </div>
+      <div className="flex flex-col items-center w-2xl">
+        <h1>Update User Form</h1>
+        <UserForm
+          onSubmit={(values) => console.log(values)}
+          initialValues={{
+            name: "John",
+            lastname: "Doe",
+            email: "john.doe@example.com",
+            phone: "123-456-7890",
+            city: "New York",
+          }}
+        />
+      </div>
+      <div className="flex flex-col items-center w-2xl">
+        <h1>Banner User Form</h1>
+        <UserForm
+          onSubmit={(values) => console.log(values)}
+          fields={["email"]}
+        />
       </div>
     </div>
   );
