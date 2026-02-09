@@ -10,7 +10,6 @@ type FormValues = {
 type UserFormProps = {
   initialValues?: FormValues;
   showTOS?: boolean;
-  cityAsSelect?: boolean;
   isCreating?: boolean;
   isEditing?: boolean;
   isBanner?: boolean;
